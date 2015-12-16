@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+</head>
+<body>
+    <form action="">
+        <input type="checkbox" name="place" value="医院"/>医院
+        <input type="checkbox" name="place" value="餐厅"/>餐厅
+        <input type="checkbox" name="place" value="学校"/>学校
+        <input type="checkbox" name="place" value="商场"/>商场
+        <input type="button" id="checkAll" value="全选">
+        <input type="button" id="checkNo" value="全不选">
+        <input type="button" id="checkRev" value="反选">
+        <input type="button" id="send" value="发送">
+    </form>
+    <script type="text/javascript">
+        $('#checkAll').click(function(){
+            $('[name=place]:checkbox').prop('checked', true);
+        });
+        $('#checkNo').click(function(){
+            $('[name=place]:checkbox').prop('checked', false);
+        });
+        $('#checkRev').click(function(){
+            $('[name=place]:checkbox').each(function(){
+                // $(this).prop('checked', !$(this).prop(checked));
+                this.checked = !this.checked;
+            });
+        });
+        $('#send').click(function(){
+            var checkEle = [];
+            $('[name=place]:checkbox:checked').each(function(){
+                    checkEle.push($(this).val());
+            });
+            alert(checkEle);
+            //serialize根据name序列化
+            var string = $('[name=place]:checkbox:checked').serialize();
+            console.log(string);//place=%E9%A4%90%E5%8E%85&place=%E5%AD%A6%E6%A0%A1
+        });
+    </script>
+    <style>
+        #select1,
+        #select2 {
+            height: 200px;
+            width: 100px;
+        }
+        .required {
+            color: #f00;
+        }
+        .hightlight {
+            color: #00f;
+            background-color: #efe;
+        }
+    </style>
+    <select multiple name="options" id="select1">
+        <option value="option1">option1</option>
+        <option value="option2">option2</option>
+        <option value="option3">option3</option>
+        <option value="option4">option4</option>
+    </select>
+    <select multiple name="options" id="select2">
+    </select>
+    </br>
+    <script>
+        $('#select1').dblclick(function(){
+            $option = $('option:selected',this);
+            $option.appendTo('#select2');
+        });
+    </script>
+    <label for="username" id="usernameLabel">姓名：</label>
+    <input type="text" id="username" class="username"/>
+    <input type="button" value="submit" id="submit"/>
+    <script>
+        $('#submit').click(function(){
+            $required = $('<span class="required">*</span>');
+            $('#usernameLabel').append($required);
+            $(document).find('.username').remove();
+        });
+    </script>
+    <style>
+        table {
+            width: 300px;
+            border: 0;
+            border-collapse: collapse;
+        }
+        table tr {
+            height: 20px;
+        }
+        table tr td {
+            height: 20px;
+        }
+    </style>
+    <table>
+    </br>
+        <input type="text" id="search" class="search"/>
+        <input type="button" value="搜索" id="searchBtn"/>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>资产</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>王一</td>
+                <td>200万</td>
+            </tr>
+            <tr>
+                <td>王er</td>
+                <td>200万</td>
+            </tr>
+            <tr>
+                <td>王san</td>
+                <td>200万</td>
+            </tr>
+            <tr>
+                <td>王si</td>
+                <td>200万</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        $('tbody > tr:contains("王一")').addClass('hightlight');
+        //$('tbody > tr:has(:checked)').addClass('hightlight');
+        function search() {
+            var searchTxt = $('#search').val();
+            $('tbody tr').hide()
+                .filter(':contains("' + searchTxt + '")').show();
+        }
+        $('#searchBtn').click(search);
+        $('#search').keyup(search);
+    </script>
+    <div>
+        <ul class="tab">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ul>
+        <div class="tab_box">
+            <div style="visibility:visible;">A</div>
+            <div style="display:none">B</div>
+            <div style="display:none">C</div>
+        </div>
+    </div>
+    <script>
+        $('.tab li').click(function(){
+            //index的应用对象是点击的父元素
+            var num = $('.tab li').index(this);
+            //eq是相对于所有div而言，siblings的拼写
+            $('.tab_box div')
+                .eq(num).show()
+                .siblings().hide();
+        });
+    </script>
+</body>
+</html>
