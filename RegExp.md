@@ -31,28 +31,28 @@ cf:
 
 #### String的使用正则
 search：    
-     ``` js
+     ```js
      String.search(/.../g);  
-     // 返回匹配的数字 
-     ```        
+     //返回匹配的数字
+     ```    
 match：  
-     ``` js
+     ```js 
      String.match(/.../g);  
      // 返回数组
      ```  
 replace：  
-     ``` js
+     ```js
      String.replace(/.../g, ...);    
      ```  
 spilt：    
-     ``` js
+     ```js
      String.spilt(/.../g);  
      // 返回匹配后的数组  
      ```    
 #### RegExp使用  
 exec:    
      cf:转义字符用两个\\\    
-     ```  
+     ```js
      var reg = new RegExp("\\d{3}", "g");            
      reg.exec(String);  
      // 返回匹配到的数组，区别于match，如果不递归调用，只返回一组数据    
@@ -60,7 +60,7 @@ exec:
      ![Img](https://github.com/Candybunny/form/blob/master/6-1.png)  
      ![Img](https://github.com/Candybunny/form/blob/master/6-2.png)  
 test:  
-     ```
+     ```js
      reg.test(String);  
      // 返回true，false     
      ```    
