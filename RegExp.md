@@ -65,4 +65,3 @@ test:
      // 返回true，false     
      ```    
      ![Img](https://github.com/Candybunny/form/blob/master/6-3.png)  
-
