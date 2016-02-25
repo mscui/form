@@ -24,45 +24,45 @@ cf：/a+/和/a+?/的区别：
 cf:  
 1. \b表示\w与\W之间：一般为了取得不包括空格的内容  
      ![Img](https://github.com/Candybunny/form/blob/master/4-1.png) ![Img](https://github.com/Candybunny/form/blob/master/4-2.png)  
-2. （？=p）表示正向先行断言，接下来的字符都与p匹配，但是不包含p这个字符  
+2. (?=p) 表示正向先行断言，接下来的字符都与p匹配，但是不包含p这个字符  
      ![Img](https://github.com/Candybunny/form/blob/master/4-3.png)  
-3. （？！p）表示负向先行断言，接下来的字符都不与p匹配  
+3. (?!p) 表示负向先行断言，接下来的字符都不与p匹配  
      ![Img](https://github.com/Candybunny/form/blob/master/4-4.png)  
 
 #### String的使用正则
 search：    
      ``` 
-     String.search(/.../g);  
+     String.search(/.../g);    
      返回匹配的数字 
      ```        
 match：  
      ``` 
-     String.match(/.../g);  
+     String.match(/.../g);    
      返回数组
      ```  
 replace：  
      ```
-     String.replace(/.../g, ...);  
+     String.replace(/.../g, ...);    
      ```  
 spilt：    
      ```
-     String.spilt(/.../g);  
+     String.spilt(/.../g);    
      返回匹配后的数组  
      ```    
 #### RegExp使用  
 exec:    
-     cf:转义字符用两个\\  
-     ```
-     var reg = new RegExp("\\d{3}", "g");  
-     reg.exec(String);
+     cf:转义字符用两个\\\    
      ```  
+     var reg = new RegExp("\\d{3}", "g");      
+     reg.exec(String);  
      返回匹配到的数组，区别于match，如果不递归调用，只返回一组数据  
+     ```  
      ![Img](https://github.com/Candybunny/form/blob/master/6-1.png)  
      ![Img](https://github.com/Candybunny/form/blob/master/6-2.png)  
 test:  
      ```
-     reg.test(String);
-     ```  
+     reg.test(String);  
      返回true，false  
+     ```    
      ![Img](https://github.com/Candybunny/form/blob/master/6-3.png)  
 
