@@ -32,43 +32,39 @@
 #### String的使用正则
 search：    
      ```js
+     //返回匹配的数字  
      String.search(/.../g);  
-     
-     //返回匹配的数字
      ```    
 match：  
-     ```js 
+     ```js
+     // 返回数组  
      String.match(/.../g);  
-     
-     // 返回数组
      ```  
 replace：  
-     ```js
+     ```js  
      String.replace(/.../g, ...);  
-     
      ```  
 spilt：    
-     ```js
-     String.spilt(/.../g);  
-     
+     ```js  
      // 返回匹配后的数组  
+     String.spilt(/.../g);  
      ```  
 #### RegExp使用  
 exec:    
      **cf:转义字符用两个\\\**  
      ```js
+     // 返回匹配到的数组，区别于match，如果不递归调用，只返回一组数据  
+     
      var reg = new RegExp("\\d{3}", "g");  
-     
-     reg.exec(String);  
-     
-     // 返回匹配到的数组，区别于match，如果不递归调用，只返回一组数据
+     reg.exec(String);
      ```  
      ![Img](https://github.com/Candybunny/form/blob/master/6-1.png)  
      ![Img](https://github.com/Candybunny/form/blob/master/6-2.png)  
 test:  
      ```js
+     // 返回true，false  
+     
      reg.test(String);  
      
-     // 返回true，false     
-     ```    
+     ```  
      ![Img](https://github.com/Candybunny/form/blob/master/6-3.png)  
