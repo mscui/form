@@ -33,28 +33,34 @@
 search：    
      ```js
      String.search(/.../g);  
+     
      //返回匹配的数字
      ```    
 match：  
      ```js 
      String.match(/.../g);  
+     
      // 返回数组
      ```  
 replace：  
      ```js
-     String.replace(/.../g, ...);    
+     String.replace(/.../g, ...);  
+     
      ```  
 spilt：    
      ```js
      String.spilt(/.../g);  
+     
      // 返回匹配后的数组  
-     ```    
+     ```  
 #### RegExp使用  
 exec:    
      **cf:转义字符用两个\\\**  
      ```js
-     var reg = new RegExp("\\d{3}", "g");            
+     var reg = new RegExp("\\d{3}", "g");  
+     
      reg.exec(String);  
+     
      // 返回匹配到的数组，区别于match，如果不递归调用，只返回一组数据
      ```  
      ![Img](https://github.com/Candybunny/form/blob/master/6-1.png)  
@@ -62,6 +68,7 @@ exec:
 test:  
      ```js
      reg.test(String);  
+     
      // 返回true，false     
      ```    
      ![Img](https://github.com/Candybunny/form/blob/master/6-3.png)  
