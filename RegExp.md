@@ -30,41 +30,42 @@
      ![Img](https://github.com/Candybunny/form/blob/master/4-4.png)  
 
 #### String的使用正则
-search：    
-     ```js
-     //返回匹配的数字  
-     String.search(/.../g);  
-     ```    
-match：  
-     ```js
-     // 返回数组  
-     String.match(/.../g);  
-     ```  
-replace：  
-     ```js  
-     String.replace(/.../g, ...);  
-     ```  
-spilt：    
-     ```js  
-     // 返回匹配后的数组  
-     String.spilt(/.../g);  
-     ```  
+search:  
+   ```js
+   //返回匹配的数字  
+   String.search(/.../g);  
+   ```    
+match:  
+   ```js
+   // 返回数组  
+   String.match(/.../g);  
+   ```  
+replace:    
+   ```js  
+   String.replace(/.../g, ...);  
+   ```  
+spilt:     
+   ```js  
+   // 返回匹配后的数组  
+   String.spilt(/.../g);  
+   ```  
 #### RegExp使用  
 exec:    
-     **cf:转义字符用两个\\\**  
-     ```js
-     // 返回匹配到的数组，区别于match，如果不递归调用，只返回一组数据  
-     
-     var reg = new RegExp("\\d{3}", "g");  
-     reg.exec(String);
-     ```  
-     ![Img](https://github.com/Candybunny/form/blob/master/6-1.png)  
-     ![Img](https://github.com/Candybunny/form/blob/master/6-2.png)  
+   **cf:转义字符用两个\\\**  
+	
+   ```js
+   // 返回匹配到的数组，区别于match，如果不递归调用，只返回一组数据  
+	
+   var reg = new RegExp("\\d{3}", "g");  
+   reg.exec(String);
+   ```  
+   ![Img](https://github.com/Candybunny/form/blob/master/6-1.png)  
+   ![Img](https://github.com/Candybunny/form/blob/master/6-2.png)  
 test:  
-     ```js
-     // 返回true，false  
-     
-     reg.test(String);  
-     
-     ```  
-     ![Img](https://github.com/Candybunny/form/blob/master/6-3.png)  
+
+   ```js
+   // 返回true，false  
+
+   reg.test(String);  
+   ```  
+   ![Img](https://github.com/Candybunny/form/blob/master/6-3.png)  
