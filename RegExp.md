@@ -32,12 +32,12 @@ cf:
 #### String的使用正则
 search：    
      ``` 
-     String.search(/.../g);    
+     String.search(/.../g);     
      返回匹配的数字 
      ```        
 match：  
      ``` 
-     String.match(/.../g);    
+     String.match(/.../g);        
      返回数组
      ```  
 replace：  
@@ -46,23 +46,23 @@ replace：
      ```  
 spilt：    
      ```
-     String.spilt(/.../g);    
+     String.spilt(/.../g);        
      返回匹配后的数组  
      ```    
 #### RegExp使用  
 exec:    
      cf:转义字符用两个\\\    
      ```  
-     var reg = new RegExp("\\d{3}", "g");      
-     reg.exec(String);  
+     var reg = new RegExp("\\d{3}", "g");          
+     reg.exec(String);     
      返回匹配到的数组，区别于match，如果不递归调用，只返回一组数据  
      ```  
      ![Img](https://github.com/Candybunny/form/blob/master/6-1.png)  
      ![Img](https://github.com/Candybunny/form/blob/master/6-2.png)  
 test:  
      ```
-     reg.test(String);  
-     返回true，false  
+     reg.test(String);    
+     返回true，false       
      ```    
      ![Img](https://github.com/Candybunny/form/blob/master/6-3.png)  
 
